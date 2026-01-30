@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magla Shop</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 42px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .subtext {
+            text-align: center;
+            opacity: 0.8;
+            margin-bottom: 40px;
+            animation: fadeIn 2s ease;
+        }
+
+        .catalog {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            animation: fadeInUp 1s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 18px;
+            color: #00ffcc;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            opacity: 0.6;
+            font-size: 14px;
+            margin-top: 50px;
+        }
+
+        /* Animacije */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Glow efekt pozadine */
+        body::before {
+            content: "";
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,255,204,0.15), transparent 60%);
+            animation: rotateBg 20s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes rotateBg {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+<header>MAGLA SHOP</header>
+<div class="subtext">Katalog OKSO Vape uređaja </div>
+
+<section class="catalog">
+    <div class="card">
+        <img src="okso.jpg" alt="OKSO Vape">
+        <div class="product-name">OKSO Double Flavor</div>
+        <div class="price">15 €</div>
+    </div>
+
+    <div class="card">
+        <img src="okso.jpg" alt="OKSO Vape">
+        <div class="product-name">OKSO Blueberry Ice</div>
+        <div class="price">15 €</div>
+    </div>
+
+    <div class="card">
+        <img src="okso.jpg" alt="OKSO Vape">
+        <div class="product-name">OKSO Banana Pineapple</div>
+        <div class="price">15 €</div>
+    </div>
+
+    <div class="card">
+        <img src="okso.jpg" alt="OKSO Vape">
+        <div class="product-name">OKSO Peach Ice</div>
+        <div class="price">15 €</div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Magla Shop — Ova stranica je samo katalog proizvoda. Online naručivanje nije dostupno.
+</footer>
+
+</body>
+</html>
